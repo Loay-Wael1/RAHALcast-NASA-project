@@ -8,45 +8,44 @@ import { Link } from 'react-router-dom';
 import { RiRobot3Fill } from 'react-icons/ri';
 
 export default function Home() {
-    useEffect(() => {
-        // Initialize video slider and Swiper
-        initVideoSlider();
-        const swiper = initSwiper();
+   useEffect(() => {
+  initVideoSlider();
+  const swiper = initSwiper();
 
-        // Set up automatic video switching
-        const videoButtons = document.querySelectorAll(".video-btn");
-        let currentVideoIndex = 0;
-        const videoElement = document.getElementById("video-slider");
+  const videoButtons = document.querySelectorAll(".video-btn");
+  let currentVideoIndex = 0;
+  const videoElement = document.getElementById("video-slider");
 
-        const switchVideo = () => {
-            videoButtons[currentVideoIndex].classList.remove("blue"); // Remove highlight from current
-            currentVideoIndex = (currentVideoIndex + 1) % videoButtons.length; // Move to next
-            videoButtons[currentVideoIndex].classList.add("blue"); // Highlight next
-            const newSrc = videoButtons[currentVideoIndex].getAttribute("data-src");
-            if (videoElement) {
-                videoElement.src = newSrc;
-                videoElement.play().catch(error => console.error("Video play failed:", error));
-            }
-        };
+  const switchVideo = () => {
+    if (!videoElement || videoButtons.length === 0) return;
 
-        // Start automatic switching every 5 seconds (adjustable)
-        const intervalId = setInterval(switchVideo, 5000);
+    videoButtons[currentVideoIndex].classList.remove("blue");
 
-        // Attempt to enable auto-play for Swiper if it's a Swiper instance
-        if (swiper && swiper.autoplay) {
-            swiper.autoplay.start();
-        }
+    currentVideoIndex = (currentVideoIndex + 1) % videoButtons.length;
+    videoButtons[currentVideoIndex].classList.add("blue");
 
-        // Cleanup
-        return () => {
-            const vidBtn = document.querySelectorAll(".video-btn");
-            vidBtn.forEach(slide => {
-                slide.removeEventListener("click", slide.onclick);
-            });
-            if (swiper) swiper.destroy();
-            clearInterval(intervalId); 
-        };
-    }, []);
+    const newSrc = videoButtons[currentVideoIndex].getAttribute("data-src");
+
+    videoElement.pause(); 
+    videoElement.src = newSrc; 
+    videoElement.load(); 
+
+    videoElement
+      .play()
+      .catch((error) => console.warn("Video play failed:", error));
+  };
+
+  const intervalId = setInterval(switchVideo, 7000);
+
+  if (swiper && swiper.autoplay) swiper.autoplay.start();
+
+  return () => {
+    const vidBtn = document.querySelectorAll(".video-btn");
+    vidBtn.forEach((slide) => slide.removeEventListener("click", slide.onclick));
+    if (swiper) swiper.destroy();
+    clearInterval(intervalId);
+  };
+}, []);
 
     return (
         <>
