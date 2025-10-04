@@ -30,7 +30,6 @@
 - [API Documentation](#-api-documentation)
 - [Architecture](#-architecture)
 - [Data Sources](#-data-sources)
-- [Team](#-team)
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 - [License](#-license)
