@@ -13,7 +13,7 @@
 
 *Built for NASA Space Apps Challenge 2025: "Will It Rain on My Parade?"*
 
-[Live Demo](https://raha-lcast-nasa-project.vercel.app/) • [API Repository](https://github.com/Loay-Wael1/ParadeGuardApi) • [Report Bug](mailto:hossamsalah.cse@gmail.com) • [Request Feature](mailto:hossamsalah.cse@gmail.com)
+[Live Demo](https://raha-lcast-nasa-project.vercel.app/) • [API Repository](https://github.com/Loay-Wael1/ParadeGuardApi) • [Report Bug](mailto:loayw842@gmail.com) • [Request Feature](mailto:loayw842@gmail.com)
 
 </div>
 
