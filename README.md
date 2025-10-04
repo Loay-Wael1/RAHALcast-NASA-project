@@ -1,8 +1,9 @@
 # 🌍 RAHLA Cast - Weather Forecasting Application
 
 <div align="center">
+  <img src="public/Logo.png" alt="RAHLA Cast Banner" width="150"/>
+</div>
 
-![RAHLA Cast Banner](public/Logo.png)
 
 **Predict Weather Conditions Using 40 Years of NASA Earth Observation Data**
 
@@ -475,50 +476,7 @@ RAHLA Cast aggregates data from multiple NASA Earth observation programs:
 
 ---
 
-## 👥 Team
 
-Built by **Team RAHLA** for NASA Space Apps Challenge 2025:
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="public/members/hossam.jpg" width="100px" alt="Hossam Salah"/><br />
-      <b>Hossam Salah</b><br />
-      Team Leader | AI & Data Analysis
-    </td>
-    <td align="center">
-      <img src="public/members/loay.jpg" width="100px" alt="Loay Wael"/><br />
-      <b>Loay Wael</b><br />
-      Backend Developer
-    </td>
-    <td align="center">
-      <img src="public/members/rahma.jpg" width="100px" alt="Rahma Hany"/><br />
-      <b>Rahma Hany</b><br />
-      Web Developer
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="public/members/amira.jpg" width="100px" alt="Amira Amgad"/><br />
-      <b>Amira Amgad</b><br />
-      Web Developer
-    </td>
-    <td align="center">
-      <img src="public/members/rana.jpg" width="100px" alt="Rana Sameh"/><br />
-      <b>Rana Sameh</b><br />
-      UI/UX Designer
-    </td>
-    <td align="center">
-      <img src="public/members/alyaa.jpg" width="100px" alt="Alyaa Elsayed"/><br />
-      <b>Alyaa Elsayed</b><br />
-      Video Editor & Demo Lead
-    </td>
-  </tr>
-</table>
-
-**Contact**: hossamsalah.cse@gmail.com
-
----
 
 ## 🐛 Troubleshooting
 
