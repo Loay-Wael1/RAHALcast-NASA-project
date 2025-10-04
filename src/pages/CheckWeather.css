@@ -1,0 +1,304 @@
+/* --- Page Container --- */
+.page-container {
+  margin-top: 50px;
+  display: flex;
+  height: 100vh;
+  background: var(--body-bg);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+}
+
+/* --- Left Form Section --- */
+.form-section {
+  margin-top: 150px;
+  width: 50%;
+  padding: 125px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.form-subtitle {
+  font-size: 16px;
+  color: #aab7c4;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  width: 95%;
+}
+
+/* --- Input Groups --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--shadow-color);
+  box-sizing: border-box;
+  width: 70%;
+  margin-left: 20%;
+  padding: 8px 12px;
+}
+
+.input-wrapper.pill {
+  border-radius: 25px;
+}
+
+.input-wrapper:focus-within {
+  border: 1px solid var(--primary-color);
+}
+
+.input-wrapper .input-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.input-wrapper input,
+.input-wrapper .date-picker {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent; 
+  font-size: 14px;
+  color: #ddd;
+  height: 24px;
+  padding: 0;
+}
+.input-wrapper input::placeholder {
+  color: #ddd; 
+}
+
+
+/* --- Button --- */
+.btn-weather {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border: 0.2rem solid var(--primary-color);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: transparent;
+  transition: 1s;
+}
+
+.btn-weather:hover {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+/* --- Right Map Section --- */
+.map-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #aab7c4;
+}
+
+.map-header .map-icon {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.map-wrapper {
+  flex: 1;
+  background: var(--nav-bg);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.map-wrapper .leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+/* --- Loading and Error States --- */
+.loading,
+.error {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.loading {
+  color: var(--primary-color);
+}
+
+
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablets and smaller (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .form-section {
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px 30px;
+  }
+
+  .form-subtitle {
+    width: 100%;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .btn-weather {
+    margin-bottom: 3rem;
+  }
+
+  .map-section {
+    width: 100%;
+    padding: 30px 30px 50px 30px;
+    height: 500px;
+  }
+
+  .map-wrapper {
+    height: 450px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .page-container {
+    margin-top: 20px;
+  }
+
+  .form-section {
+    margin-top: 30px;
+    padding: 30px 20px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .input-group {
+    margin-bottom: 12px;
+  }
+
+  .input-wrapper {
+    padding: 10px 12px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper .date-picker {
+    font-size: 14px;
+  }
+
+  .btn-weather {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .map-section {
+    padding: 20px 20px 40px 20px;
+    height: 400px;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+
+  .map-header {
+    font-size: 13px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .page-container {
+    margin-top: 10px;
+  }
+
+  .form-section {
+    margin-top: 20px;
+    padding: 20px 15px;
+  }
+
+  .form-title {
+    font-size: 1.3rem;
+  }
+
+  .form-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .input-wrapper {
+    padding: 8px 10px;
+  }
+
+  .input-wrapper .input-icon {
+    font-size: 14px;
+    margin-right: 6px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper .date-picker {
+    font-size: 13px;
+  }
+
+  .btn-weather {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .map-section {
+    padding: 15px 15px 30px 15px;
+    height: 350px;
+  }
+
+  .map-wrapper {
+    border-radius: 10px;
+    height: 300px;
+  }
+}
