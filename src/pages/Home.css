@@ -1,362 +1,365 @@
 .all {
-    background-color: var(--body-bg);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    position: relative;
-    z-index: 0;
-    margin-top: 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+  margin-top: 30px;
 }
 
 .home .content {
-    text-align: center;
+  text-align: center;
 }
 
 .home .content h3 {
-    font-size: 3rem;
-    color: #fff;
-    text-transform: uppercase;
-    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.1);
 }
 
 .home .content p {
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem 0;
 }
 
 .home .controls {
-    padding: 1rem;
-    border-radius: 5rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: relative;
-    top: 10rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 10rem;
 }
 
 .home .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .home .controls .video-btn {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #fff;
-    cursor: pointer;
-    margin: 0 0.3rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0 0.3rem;
 }
 
 .home .controls .video-btn.blue {
-    background: #59E5C7;
+  background: #59E5C7;
 }
 
 .btnn {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border: 0.2rem solid var(--primary-color);
-    cursor: pointer;
-    font-size: 1.7rem;
-    background-color: var(--btn-bg);
-    transition: 1s;
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border: 0.2rem solid var(--primary-color);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: var(--btn-bg);
+  transition: 1s;
 }
 
 .btnn:hover {
-    color: var(--text-color);
-    background-color: var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
 .hidden {
-    text-align: center;
-    padding: 2.5rem 0;
+  text-align: center;
+  padding: 2.5rem 0;
 }
 
 .hidden span {
-    font-size: 3rem;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border-radius: .5rem;
-    padding: 0.1rem 0.7rem;
-    margin: 2px;
+  font-size: 3rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: .5rem;
+  padding: 0.1rem 0.7rem;
+  margin: 2px;
 }
 
 .how {
-    margin-right: 12px;
-    display: inline;
+  margin-right: 12px;
+  display: inline;
 }
 
 .it {
-    margin-right: 12px;
-    display: inline;
+  margin-right: 12px;
+  display: inline;
 }
 
 .works {
-    margin-right: 10px;
-    display: inline;
+  margin-right: 10px;
+  display: inline;
 }
 
 .posts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 80%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 120px;
-    margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+  margin-top: 50px;
 }
+
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 80%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 120px;
-    margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+  margin-top: 50px;
 }
 
 .cardd {
-    padding: 20px;
-    background-color: #ffffff36;
-    width: 350px;
-    height: 300px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: rgba(255, 255, 255, 0.623) 1.95px 1.95px 2.6px;
-    border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff36;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: rgba(255, 255, 255, 0.623) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
 }
+
 .post {
-    padding: 20px;
-    width: 350px;
-    height: 300px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: var(--shadow-color) 1.95px 1.95px 2.6px;
-    border-radius: 10px;
-    background-color: var(--card-bg);
+  padding: 20px;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: var(--shadow-color) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
 }
 
 
 
 .nasa {
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    height: 300px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 150px;
-    text-align: center;
-    box-shadow: var(--shadow-color) 0px 2px 4px 0px inset;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 150px;
+  text-align: center;
+  box-shadow: var(--shadow-color) 0px 2px 4px 0px inset;
 }
 
 .nasaImg {
-    background-image: url("/c.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 700px;
-    height: 300px;
-    border-radius: 10px;
-    margin-top: 150px;
+  background-image: url("/c.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 700px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 150px;
 }
 
 .data {
-    width: 500px;
-    text-align: center;
+  width: 500px;
+  text-align: center;
 }
 
 .data h2 {
-    font-size: 30px;
-    margin-top: 100px;
+  font-size: 30px;
+  margin-top: 100px;
 }
 
 .calenderImg {
-    background-image: url("/calender.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 300px;
-    border-radius: 10px;
-    margin-top: 200px;
-    margin-left: 200px;
+  background-image: url("/calender.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 200px;
+  margin-left: 200px;
 }
 
 .dashImg {
-    background-image: url("/dash.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
-    margin-top: 100px;
+  background-image: url("/dash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 100px;
 }
 
 .chatImg {
-    background-image: url("/chat.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 400px;
-    height: 350px;
-    border-radius: 10px;
-    margin-top: 100px;
-    margin-left: 100px;
+  background-image: url("/chat.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 
 .Visualize {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .Visualize p {
-    width: 55%;
-    margin: auto;
-    text-align: center;
+  width: 55%;
+  margin: auto;
+  text-align: center;
 }
 
 .Visualize .btnn {
-    display: inline-block;
-    margin-top: 1rem;
-    margin-bottom: 10rem;
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border: 0.2rem solid var(--primary-color);
-    cursor: pointer;
-    font-size: 1.7rem;
-    background-color: transparent;
-    margin-left: 43%;
-    transition: 1s;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border: 0.2rem solid var(--primary-color);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background-color: transparent;
+  margin-left: 43%;
+  transition: 1s;
 }
 
 .Visualize .btnn:hover {
-    color: var(--text-color);
-    background-color: var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
 
 
 /* Target Users */
 .target-users {
-    margin-top: -100px;
-    padding: 80px 0;
-    background: var(--body-bg);
+  margin-top: -100px;
+  padding: 80px 0;
+  background: var(--body-bg);
 }
 
 .users-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-top: var(--space-32);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: var(--space-32);
 }
 
 .user-card {
-    background: var(--card-bg);
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    text-align: center;
-    border: 1px solid var(--shadow-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    transition: all var(--duration-normal) var(--ease-standard);
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--shadow-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: all var(--duration-normal) var(--ease-standard);
 }
 
 .user-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px var(--shadow-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-color);
 }
 
 .user-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-    display: block;
-    color: var(--primary-color);
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--primary-color);
 }
 
 
 
 /* Team Section */
 .team {
-    padding: 80px 0;
-    background: var(--body-bg);
+  padding: 80px 0;
+  background: var(--body-bg);
 }
 
 .team-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .team-member {
-    width: 350px;
-    height: 290px;
-    background: var(--card-bg);
-    padding: 24px;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid var(--shadow-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    transition: all 0.3s ease;
+  width: 350px;
+  height: 290px;
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid var(--shadow-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: all 0.3s ease;
 }
 
 .team-member:hover {
-    box-shadow: 0 10px 12px var(--shadow-color);
+  box-shadow: 0 10px 12px var(--shadow-color);
 }
 
 .member-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 auto 16px;
-    border: 2px solid var(--primary-color);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto 16px;
+  border: 2px solid var(--primary-color);
 }
 
 .member-role {
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-bottom: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .member-desc {
-    color: var(--text-color);
-    font-size: 14px;
+  color: var(--text-color);
+  font-size: 14px;
 }
+
 /* Tablet screens */
 @media (max-width: 992px) {
   .nasa {
@@ -366,7 +369,10 @@ h2 {
     gap: 20px;
   }
 
-  .nasaImg, .calenderImg, .dashImg, .chatImg {
+  .nasaImg,
+  .calenderImg,
+  .dashImg,
+  .chatImg {
     width: 100%;
     max-width: 400px;
     margin: 20px auto;
@@ -401,13 +407,15 @@ h2 {
     font-size: clamp(1rem, 3.5vw, 1.2rem);
   }
 
-  .posts, .cards {
+  .posts,
+  .cards {
     flex-direction: column;
     width: 90%;
     gap: 1.2rem;
   }
 
-  .cardd, .post {
+  .cardd,
+  .post {
     width: 100%;
     min-height: 220px;
   }
@@ -417,13 +425,18 @@ h2 {
     padding: 0.1rem 0.5rem;
   }
 
-  .team-member, .user-card {
+  .team-member,
+  .user-card {
     width: 100%;
   }
 }
 
 /* Mobile phones */
 @media (max-width: 480px) {
+  .allHome {
+    overflow: hidden;
+  }
+
   .home .content h3 {
     font-size: clamp(1.2rem, 6vw, 1.8rem);
   }
@@ -442,7 +455,8 @@ h2 {
     width: 0.6rem;
   }
 
-  .posts, .cards {
+  .posts,
+  .cards {
     gap: 1rem;
     width: 95%;
   }
@@ -453,9 +467,22 @@ h2 {
     margin: 20px auto;
   }
 
-  .nasaImg, .calenderImg, .dashImg, .chatImg {
-    height: 150px;
-    max-width: 100%;
+  .nasaImg,
+  .calenderImg,
+  .dashImg,
+  .chatImg {
+    display: none;
+  }
+
+  .nasa h2 {
+    margin-top: 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .Visualize {
+    height: 300px;
+
   }
 
   .Visualize p {
@@ -464,7 +491,8 @@ h2 {
 
   .hidden span {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
-    padding: 0.05rem 0.3rem;
+    padding: 0.05rem 0.22rem;
+    text-align: center;
   }
 
   .member-avatar {
