@@ -1,82 +1,58 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import { FaFileDownload, FaMapMarkerAlt } from 'react-icons/fa';
 import { BsFillCalendarDateFill } from 'react-icons/bs';
 import { MdInsights } from 'react-icons/md';
-import { initVideoSlider, initSwiper } from './myScript.js';
+import { initSwiper } from './myScript.js';
 import { Link } from 'react-router-dom';
 import { RiRobot3Fill } from 'react-icons/ri';
 
 export default function Home() {
-    const videoRef = useRef(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const intervalRef = useRef(null);
 
+    // Array of your background images
+    const images = [
+        './home-1.png',
+        './home-2.png', 
+        './home-3.png',
+        './home-4.png',
+        './home-5.png'
+    ];
+
     useEffect(() => {
-        initVideoSlider();
         const swiper = initSwiper();
 
-        const videoButtons = document.querySelectorAll(".video-btn");
-        let currentVideoIndex = 0;
-        const videoElement = videoRef.current;
-
-        const switchVideo = async () => {
-            if (!videoElement || videoButtons.length === 0) return;
-
-            videoButtons[currentVideoIndex].classList.remove("blue");
-            currentVideoIndex = (currentVideoIndex + 1) % videoButtons.length;
-            videoButtons[currentVideoIndex].classList.add("blue");
-
-            const newSrc = videoButtons[currentVideoIndex].getAttribute("data-src");
-
-            try {
-                videoElement.pause();
-                videoElement.src = newSrc;
-                videoElement.load();
-
-                // Wait for video to be ready before playing
-                await videoElement.play();
-            } catch (error) {
-                // Silently handle autoplay errors - don't log to console
-                // This is expected behavior on some browsers/devices
-                if (error.name !== 'AbortError' && error.name !== 'NotAllowedError') {
-                    console.warn("Video play failed:", error.name);
-                }
-            }
-        };
-
-        // Initial play attempt
-        if (videoElement) {
-            videoElement.play().catch((error) => {
-                // Silently handle initial autoplay block
-                if (error.name !== 'AbortError' && error.name !== 'NotAllowedError') {
-                    console.warn("Initial video play failed:", error.name);
-                }
-            });
-        }
-
-        // Start interval for switching videos
-        intervalRef.current = setInterval(switchVideo, 7000);
+        // Auto-change images every 3 seconds
+        intervalRef.current = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
 
         if (swiper && swiper.autoplay) swiper.autoplay.start();
 
-        // Cleanup function
         return () => {
-            const vidBtn = document.querySelectorAll(".video-btn");
-            vidBtn.forEach((slide) => slide.removeEventListener("click", slide.onclick));
             if (swiper) swiper.destroy();
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
             }
-            if (videoElement) {
-                videoElement.pause();
-            }
         };
     }, []);
+
+    const handleImageButtonClick = (index) => {
+        setCurrentImageIndex(index);
+        // Reset interval when user manually selects an image
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = setInterval(() => {
+                setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+            }, 5000);
+        }
+    };
 
     return (
         <>
             <div className="allHome">
-                {/* <!-- videos --> */}
+                {/* <!-- Hero Section with Images --> */}
                 <section className="home" id="home">
                     <div className="content">
                         <h3>Ready to take on the weather?</h3>
@@ -86,23 +62,22 @@ export default function Home() {
                         </Link>
                     </div>
                     <div className="controls">
-                        <span className="video-btn blue" data-src="./vid-1.mp4"></span>
-                        <span className="video-btn" data-src="./vid-5.mp4"></span>
-                        <span className="video-btn" data-src="./vid-3.mp4"></span>
-                        <span className="video-btn" data-src="./vid-4.mp4"></span>
-                        <span className="video-btn" data-src="./vid-2.mp4"></span>
+                        {images.map((_, index) => (
+                            <span 
+                                key={index}
+                                className={`video-btn ${currentImageIndex === index ? 'blue' : ''}`}
+                                onClick={() => handleImageButtonClick(index)}
+                            ></span>
+                        ))}
                     </div>
-                    <div className="video-container">
-                        <video
-                            ref={videoRef}
-                            src="./vid-1.mp4"
-                            id="video-slider"
-                            loop
-                            autoPlay
-                            muted
-                            playsInline
-                            preload="auto"
-                        />
+                    <div className="image-container">
+                        {images.map((image, index) => (
+                            <div
+                                key={index}
+                                className={`background-image ${currentImageIndex === index ? 'active' : ''}`}
+                                style={{ backgroundImage: `url(${image})` }}
+                            ></div>
+                        ))}
                     </div>
                 </section>
                 <div className='all'>
